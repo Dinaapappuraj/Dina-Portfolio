@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dina P. | Java, Mobile & AI/ML Developer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Dina P., a Java, Mobile Application & AI/ML Developer specializing in Flutter, Firebase, and Machine Learning integrations.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Background Canvas for Aurora Particle Effect -->
+    <canvas id="aurora-canvas"></canvas>
+    
+    <!-- Floating Social Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://github.com/Dinaapappuraj" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            <div class="sidebar-tooltip">
+                <strong>GitHub</strong>
+                <span>github.com/Dinaapappuraj</span>
+            </div>
+        </a>
+        <a href="https://linkedin.com/in/dinapappuraj" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <div class="sidebar-tooltip">
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/dinapappuraj</span>
+            </div>
+        </a>
+        <a href="mailto:dinapappuraj@gmail.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div class="sidebar-tooltip">
+                <strong>Email</strong>
+                <span>dinapappuraj@gmail.com</span>
+            </div>
+        </a>
+        <a href="tel:+918610118350" aria-label="Phone">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div class="sidebar-tooltip">
+                <strong>Phone</strong>
+                <span>+91 8610118350</span>
+            </div>
+        </a>
+    </div>
+    
+    <!-- Ambient Glow Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">DINA P.</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-grid">
+                    <!-- Hero Left (Profile photo) -->
+                    <div class="hero-image-container fade-in">
+                        <div class="profile-photo-wrapper">
+                            <img src="assets/Pic.png" alt="Dina P. Profile Photo" class="profile-photo">
+                            <div class="glow-ring"></div>
+                        </div>
+                    </div>
+                    <!-- Hero Right (Details) -->
+                    <div class="hero-details-container fade-in">
+                        <h1 class="hero-title">Dina P.</h1>
+                        <h2 class="hero-subtitle" id="rotating-subtitle"></h2>
+                        <div class="hero-location">
+                            <i data-lucide="map-pin"></i>
+                            <span>Chennai, Tamil Nadu, India</span>
+                        </div>
+                        <p class="hero-description">
+                            Software Developer with hands-on experience building Flutter mobile applications, integrating backend services, and developing AI-powered solutions for real-world challenges.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="./Dina_Resume.pdf" download="Dina_Resume.pdf" class="btn btn-primary">
+                                <i data-lucide="download"></i>
+                                <span>Download Resume</span>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary">
+                                <span>View Projects</span>
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Career Objective & Development Focus</h2>
+                </div>
+                
+                <div class="about-card glass-card">
+                    <div class="about-grid">
+                        <div class="about-info">
+                            <h3>Professional Summary</h3>
+                            <p>
+                                I am a Software Developer passionate about building modern mobile applications, scalable backend systems, and AI-powered solutions. With hands-on experience in Flutter, Firebase, and full-stack development, I enjoy transforming ideas into intuitive and impactful digital products. I thrive in collaborative environments and continuously explore new technologies to create meaningful user experiences.
+                            </p>
+                        </div>
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Development Focus</span>
+                                <span class="detail-value">Mobile & Web Apps, ML Integrations, Backend Workflows</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Professional Interests</span>
+                                <span class="detail-value">Cross-Platform Development, Computer Vision, Real-Time Sync</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Technologies I Enjoy</span>
+                                <span class="detail-value">Flutter, Java, Firebase, Flask, Dart, OpenCV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Capabilities</span>
+                    <h2 class="section-title">Technical Expertise</h2>
+                </div>
+
+                <div class="skills-wrapper">
+                    <!-- Skill Categories Grid -->
+                    <div class="skills-grid">
+                        
+                        <!-- Languages -->
+                        <div class="skill-category-card glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <div class="category-header">
+                                <i data-lucide="code-2" class="category-icon text-primary"></i>
+                                <h3>Languages</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <div class="skill-tag"><i data-lucide="coffee"></i> <span>Java</span></div>
+                                <div class="skill-tag"><i data-lucide="terminal"></i> <span>Python (Basics)</span></div>
+                                <div class="skill-tag"><i data-lucide="database"></i> <span>SQL</span></div>
+                                <div class="skill-tag"><i data-lucide="smartphone"></i> <span>Dart</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile & Web -->
+                        <div class="skill-category-card glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <div class="category-header">
+                                <i data-lucide="smartphone" class="category-icon text-secondary"></i>
+                                <h3>Mobile & Web</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <div class="skill-tag"><i data-lucide="layers"></i> <span>Flutter</span></div>
+                                <div class="skill-tag"><i data-lucide="laptop"></i> <span>Android Studio</span></div>
+                                <div class="skill-tag">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="lucide"><path d="M3 2l1.6 17.8L12 22l7.4-2.2L21 2H3zm13.7 6.1H9.8l-.2-2h7.3l-.2 2.2H9.6L9 12.1h7.4l-.5 5.5-3.9 1.1-3.9-1.1-.3-2.8H10l.2 1.6 1.8.5 1.8-.5.2-2.1H7.8l.6-6.6h8.7l-.2 2.2z"/></svg>
+                                    <span>HTML</span>
+                                </div>
+                                <div class="skill-tag">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="lucide"><path d="M3 2l1.6 17.8L12 22l7.4-2.2L21 2H3zm14.3 4h-9l-.2-2h9.2l-.2 2zm-9.4 4.2h7.3l-.2 2.2H8.3l-.6 6.6 4.3 1.2 4.3-1.2.4-4H14.1l-.2 1.8-1.9.5-1.9-.5-.1-1.6h5.2l.6-6.6H7.7l.2 2z"/></svg>
+                                    <span>CSS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Databases -->
+                        <div class="skill-category-card glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <div class="category-header">
+                                <i data-lucide="database-backup" class="category-icon text-primary"></i>
+                                <h3>Databases</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <div class="skill-tag"><i data-lucide="flame"></i> <span>Firebase Firestore</span></div>
+                                <div class="skill-tag"><i data-lucide="server"></i> <span>MongoDB</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Frameworks & Libraries -->
+                        <div class="skill-category-card glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <div class="category-header">
+                                <i data-lucide="blocks" class="category-icon text-secondary"></i>
+                                <h3>Frameworks & Libraries</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <div class="skill-tag"><i data-lucide="cpu"></i> <span>Flask</span></div>
+                                <div class="skill-tag"><i data-lucide="eye"></i> <span>OpenCV</span></div>
+                                <div class="skill-tag"><i data-lucide="git-branch"></i> <span>REST APIs</span></div>
+                            </div>
+                        </div>
+
+                        <!-- ML / AI -->
+                        <div class="skill-category-card glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <div class="category-header">
+                                <i data-lucide="brain" class="category-icon text-primary"></i>
+                                <h3>ML / AI</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <div class="skill-tag"><i data-lucide="network"></i> <span>CNN</span></div>
+                                <div class="skill-tag"><i data-lucide="tree-pine"></i> <span>Random Forest</span></div>
+                                <div class="skill-tag"><i data-lucide="scan-line"></i> <span>Donut OCR</span></div>
+                                <div class="skill-tag"><i data-lucide="binary"></i> <span>Transformer Models</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Tools & Version Control -->
+                        <div class="skill-category-card glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <div class="category-header">
+                                <i data-lucide="wrench" class="category-icon text-secondary"></i>
+                                <h3>Tools & Concepts</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <div class="skill-tag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> <span>GitHub</span></div>
+                                <div class="skill-tag"><i data-lucide="map"></i> <span>OpenStreetMap API</span></div>
+                                <div class="skill-tag"><i data-lucide="package"></i> <span>OOP</span></div>
+                                <div class="skill-tag"><i data-lucide="refresh-cw"></i> <span>Agile Development</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Education</span>
+                    <h2 class="section-title">Academic Timeline</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- TCE -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i data-lucide="graduation-cap"></i></div>
+                        <div class="timeline-panel glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <span class="timeline-date">2023 – 2026</span>
+                            <h3 class="timeline-title">B.E., Computer Science & Engineering</h3>
+                            <span class="timeline-subtitle">Thiagarajar College of Engineering, Madurai</span>
+                        </div>
+                    </div>
+
+                    <!-- AGPC -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i data-lucide="book-open"></i></div>
+                        <div class="timeline-panel glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <span class="timeline-date">2020 – 2023</span>
+                            <h3 class="timeline-title">Diploma in Computer Engineering</h3>
+                            <span class="timeline-subtitle">Arasan Ganesan Polytechnic College, Sivakasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Internships Section -->
+        <section id="experience" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Professional History</span>
+                    <h2 class="section-title">Internship Experience</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Kevell Corp -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i data-lucide="briefcase"></i></div>
+                        <div class="timeline-panel glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <span class="timeline-date">Dec 2024 (15 Days)</span>
+                            <h3 class="timeline-title">Flutter Mobile App Development Intern</h3>
+                            <span class="timeline-subtitle">Kevell Corp, Madurai</span>
+                            <ul class="timeline-points">
+                                <li>Developed core operational modules including user authentication, student details handling, and room allocation logic for a hostel management application using Flutter.</li>
+                                <li>Implemented backend communication and database triggers via Firebase Firestore for instant, real-time sync between admin and student portals.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Raiden Studios -->
+                    <div class="timeline-item">
+                        <div class="timeline-badge"><i data-lucide="gamepad-2"></i></div>
+                        <div class="timeline-panel glass-card hover-glow">
+                            <div class="card-glow-layer"></div>
+                            <span class="timeline-date">May 2024 – Jun 2024</span>
+                            <h3 class="timeline-title">VR Multiplayer Game Development Intern</h3>
+                            <span class="timeline-subtitle">Raiden Studios, Madurai</span>
+                            <ul class="timeline-points">
+                                <li>Contributed to game logic in C# and multiplayer networking setup in Unity, supporting concurrent sessions for up to 4 active players.</li>
+                                <li>Identified and resolved synchronization and physics latency issues, significantly reducing session-level bugs and improving gameplay fluidity.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Academic Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Money Manager -->
+                    <div class="project-card glass-card hover-glow" data-project-id="money-manager">
+                        <div class="card-glow-layer"></div>
+                        <div class="project-image-wrapper">
+                            <img src="assets/project_money.png" alt="Intelligent Money Manager App Mockup" class="project-image" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">Intelligent Money Manager</h3>
+                            <p class="project-desc">
+                                Engineered an AI-powered expense tracking Flutter application that automates receipt scanning to reduce manual entry to zero. Deployed a machine learning classification model to handle automatic expense categorization.
+                            </p>
+                            <div class="project-actions-row">
+                                <a href="https://github.com/Dinaapappuraj" target="_blank" rel="noopener" class="btn btn-secondary btn-sm project-github-btn" onclick="event.stopPropagation();">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Road Damage Detection -->
+                    <div class="project-card glass-card hover-glow" data-project-id="road-damage">
+                        <div class="card-glow-layer"></div>
+                        <div class="project-image-wrapper">
+                            <img src="assets/project_road.png" alt="AI-Enhanced Road Damage Reporting System Mockup" class="project-image" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">AI-Enhanced Road Damage Reporting System</h3>
+                            <p class="project-desc">
+                                Built an end-to-end road damage detection pipeline utilizing computer vision and deep learning models. Created a mobile client application allowing municipal workers or citizens to report structural hazards directly from the field.
+                            </p>
+                            <div class="project-actions-row">
+                                <a href="https://github.com/Dinaapappuraj" target="_blank" rel="noopener" class="btn btn-secondary btn-sm project-github-btn" onclick="event.stopPropagation();">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Hostel Management System -->
+                    <div class="project-card glass-card hover-glow" data-project-id="hostel-management">
+                        <div class="card-glow-layer"></div>
+                        <div class="project-image-wrapper">
+                            <img src="assets/project_hostel.png" alt="Hostel Management System App Mockup" class="project-image" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">Hostel Management System</h3>
+                            <p class="project-desc">
+                                A Flutter and Firebase-based hostel management application developed during internship. Includes student management, room allocation, leave management, complaint handling, and real-time communication.
+                            </p>
+                            <div class="project-actions-row">
+                                <a href="https://github.com/Dinaapappuraj" target="_blank" rel="noopener" class="btn btn-secondary btn-sm project-github-btn" onclick="event.stopPropagation();">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Wheelchair Accessibility -->
+                    <div class="project-card glass-card hover-glow" data-project-id="wheelchair-accessibility">
+                        <div class="card-glow-layer"></div>
+                        <div class="project-image-wrapper">
+                            <img src="assets/project_wheel.png" alt="Wheelchair Accessibility Mobile App Mockup" class="project-image" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">Wheelchair Accessibility Mobile Application</h3>
+                            <p class="project-desc">
+                                Designed and built a Flutter application to help users discover wheelchair-accessible locations and plan mobility routes. Features integrated search filters and physical prototype validation.
+                            </p>
+                            <div class="project-actions-row">
+                                <a href="https://github.com/Dinaapappuraj" target="_blank" rel="noopener" class="btn btn-secondary btn-sm project-github-btn" onclick="event.stopPropagation();">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Accordion / Grid (Extra Value) -->
+        <section id="certifications" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Achievements</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                </div>
+                
+                <div class="certifications-grid">
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="cloud" class="cert-icon text-primary"></i>
+                        <div class="cert-info">
+                            <h4>AWS Academy Graduate</h4>
+                            <p>Cloud Foundations, Developing, and Data Engineering</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="bar-chart-3" class="cert-icon text-secondary"></i>
+                        <div class="cert-info">
+                            <h4>Data Analytics Job Simulation</h4>
+                            <p>Deloitte (via Forage)</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="brain-circuit" class="cert-icon text-secondary"></i>
+                        <div class="cert-info">
+                            <h4>Critical Thinking in the AI Era</h4>
+                            <p>HP LIFE | HP Foundation</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="fingerprint" class="cert-icon text-primary"></i>
+                        <div class="cert-info">
+                            <h4>Cybersecurity Essentials</h4>
+                            <p>Cisco Networking Academy (Packet Tracer)</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="palette" class="cert-icon text-secondary"></i>
+                        <div class="cert-info">
+                            <h4>Digital Skills: User Experience</h4>
+                            <p>Accenture</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="trophy" class="cert-icon text-secondary"></i>
+                        <div class="cert-info">
+                            <h4>iTech Hackfest 2025 Regional Round</h4>
+                            <p>Thiagarajar College of Engineering</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="lightbulb" class="cert-icon text-primary"></i>
+                        <div class="cert-info">
+                            <h4>Smart Student Hackathon Prelims</h4>
+                            <p>IIT Madras (via Unstop)</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="shield-check" class="cert-icon text-primary"></i>
+                        <div class="cert-info">
+                            <h4>Cyber Security Workshop</h4>
+                            <p>NIT Trichy (Ethical Hacking & Cyber Security)</p>
+                        </div>
+                    </div>
+                    <div class="cert-card glass-card hover-glow">
+                        <div class="card-glow-layer"></div>
+                        <i data-lucide="award" class="cert-icon text-secondary"></i>
+                        <div class="cert-info">
+                            <h4>Department Rank Holder</h4>
+                            <p>Arasan Ganesan Polytechnic College, Sivakasi (2020–2023)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section-padding">
+            <div class="container">
+                <div class="resume-wrapper glass-card">
+                    <div class="resume-info">
+                        <span class="section-tag">Resume</span>
+                        <h2 class="resume-title">Download My Resume</h2>
+                        <p class="resume-description">
+                            Download my resume to explore my technical skills, internship experience, certifications, hackathon participation, academic background, and software development projects. Available for quick review or offline reference.
+                        </p>
+                        <div class="resume-actions">
+                            <a href="./Dina_Resume.pdf" download="Dina_Resume.pdf" class="btn btn-primary">
+                                <i data-lucide="download"></i>
+                                <span>Download Resume (PDF)</span>
+                            </a>
+                            <a href="./Dina_Resume.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
+                                <i data-lucide="external-link"></i>
+                                <span>Open PDF in Browser</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Mockup Resume Preview Card -->
+                    <div class="resume-preview-container">
+                        <div class="resume-preview-card">
+                            <div class="preview-header">
+                                <div class="preview-line-bold" style="width: 50%;"></div>
+                                <div class="preview-line" style="width: 80%;"></div>
+                                <div class="preview-contact-lines">
+                                    <div class="preview-dot-line"></div>
+                                    <div class="preview-dot-line"></div>
+                                    <div class="preview-dot-line"></div>
+                                </div>
+                            </div>
+                            <div class="preview-body">
+                                <div class="preview-section-title"></div>
+                                <div class="preview-paragraph">
+                                    <div class="preview-line" style="width: 100%;"></div>
+                                    <div class="preview-line" style="width: 95%;"></div>
+                                    <div class="preview-line" style="width: 90%;"></div>
+                                </div>
+                                <div class="preview-section-title"></div>
+                                <div class="preview-skills-grid">
+                                    <div class="preview-skill-box"></div>
+                                    <div class="preview-skill-box"></div>
+                                    <div class="preview-skill-box"></div>
+                                    <div class="preview-skill-box"></div>
+                                </div>
+                                <div class="preview-section-title"></div>
+                                <div class="preview-paragraph">
+                                    <div class="preview-line" style="width: 85%;"></div>
+                                    <div class="preview-line" style="width: 100%;"></div>
+                                    <div class="preview-line" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="contact-wrapper glass-card">
+                    <div class="section-header center">
+                        <span class="section-tag">Let's Connect</span>
+                        <h2 class="section-title">Let's Build Something Great Together</h2>
+                        <p class="section-subtitle">Open to Software Development opportunities, collaborations, and professional discussions. Feel free to reach out through any of the channels below.</p>
+                    </div>
+
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Name</label>
+                                    <input type="text" id="form-name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Email</label>
+                                    <input type="email" id="form-email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit-btn">
+                                <span>Send Message</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                <p>&copy; 2026 Dina P. All Rights Reserved.</p>
+                <p class="footer-credits">Designed & Developed by Dina P.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal-backdrop">
+        <div class="modal-container glass-card">
+            <button class="modal-close-btn" aria-label="Close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div class="modal-body-content">
+                <div class="modal-image-container">
+                    <img id="modal-project-image" src="" alt="Project Screenshot">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-project-name" class="modal-title"></h2>
+                    
+                    <div class="modal-section">
+                        <h3>Problem Statement</h3>
+                        <p id="modal-problem-statement"></p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Features</h3>
+                        <ul id="modal-features" class="modal-list"></ul>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Technology Stack</h3>
+                        <div id="modal-tech-stack" class="project-tech"></div>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Architecture / Workflow</h3>
+                        <p id="modal-architecture"></p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Challenges Solved</h3>
+                        <p id="modal-challenges"></p>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Key Contributions</h3>
+                        <ul id="modal-contributions" class="modal-list"></ul>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <a id="modal-github-link" href="" target="_blank" rel="noopener" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                            <span>View GitHub Repository</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+    <!-- EmailJS Integration -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize EmailJS with Public Key
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init({
+                    publicKey: "Uat2zu5lfxQY7pxgx",
+                });
+            }
+
+            const form = document.getElementById("contact-form");
+            
+            // Helper function to show glassmorphic notifications (preserving premium design)
+            const showToast = (message, type = 'success') => {
+                const toast = document.createElement('div');
+                toast.className = `toast glass-card hover-glow toast-${type}`;
+                
+                const isSuccess = type === 'success';
+                const iconName = isSuccess ? 'check-circle' : 'alert-circle';
+                const iconColor = isSuccess ? 'var(--primary)' : '#EF4444';
+                const borderColor = isSuccess ? 'rgba(59, 130, 246, 0.20)' : 'rgba(239, 68, 68, 0.3)';
+                const shadowColor = isSuccess ? 'rgba(59, 130, 246, 0.25)' : 'rgba(239, 68, 68, 0.15)';
+                
+                toast.innerHTML = `
+                    <div class="toast-content" style="display:flex; align-items:center; gap:12px; padding:16px 24px;">
+                        <i data-lucide="${iconName}" style="color:${iconColor}; width:20px; height:20px;"></i>
+                        <span style="font-family:var(--font-headings); font-size:14px; color:#FFFFFF; font-weight:500;">${message}</span>
+                    </div>
+                `;
+                
+                Object.assign(toast.style, {
+                    position: 'fixed',
+                    bottom: '24px',
+                    right: '24px',
+                    zIndex: '9999',
+                    backgroundColor: 'rgba(5, 5, 5, 0.9)',
+                    border: `1px solid ${borderColor}`,
+                    boxShadow: `0 10px 30px ${shadowColor}`,
+                    transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
+                    opacity: '0',
+                    transform: 'translateY(20px)'
+                });
+                
+                document.body.appendChild(toast);
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+                
+                setTimeout(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translateY(0)';
+                }, 100);
+                
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        toast.remove();
+                    }, 500);
+                }, 4000);
+            };
+
+            if (form) {
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault();
+
+                    const nameInput = document.getElementById("form-name");
+                    const emailInput = document.getElementById("form-email");
+                    const messageInput = document.getElementById("form-message");
+
+                    if (!nameInput || !emailInput || !messageInput) return;
+
+                    const name = nameInput.value.trim();
+                    const email = emailInput.value.trim();
+                    const message = messageInput.value.trim();
+
+                    if (!name || !email || !message) {
+                        showToast("Please fill in all fields.", "error");
+                        return;
+                    }
+
+                    // Reference to submit button for state management
+                    const submitBtn = form.querySelector('.form-submit-btn');
+                    const submitBtnText = submitBtn ? submitBtn.querySelector('span') : null;
+                    const submitBtnIcon = submitBtn ? (submitBtn.querySelector('i') || submitBtn.querySelector('svg')) : null;
+                    const originalBtnText = submitBtnText ? submitBtnText.textContent : 'Send Message';
+
+                    // Disable button and show sending state
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        if (submitBtnText) submitBtnText.textContent = 'Sending...';
+                        if (submitBtnIcon) submitBtnIcon.style.display = 'none';
+                    }
+
+                    const resetBtnState = () => {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            if (submitBtnText) submitBtnText.textContent = originalBtnText;
+                            if (submitBtnIcon) submitBtnIcon.style.display = '';
+                        }
+                    };
+
+                    const templateParams = {
+                        from_name: name,
+                        from_email: email,
+                        message: message
+                    };
+
+                    emailjs.send("service_epn2qzs", "template_an6084f", templateParams)
+                        .then(function(response) {
+                            showToast("Message sent successfully!", "success");
+                            form.reset();
+                            resetBtnState();
+                        })
+                        .catch(function(error) {
+                            console.error("EmailJS sending failed:", error);
+                            showToast("Failed to send message. Please try again.", "error");
+                            resetBtnState();
+                        });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
