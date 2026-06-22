@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Integrated the machine learning categorization engine on the server side.",
                 "Architected the Firebase Firestore real-time synchronization layer on the mobile application."
             ],
-            github: "https://github.com/Dinaapappuraj"
+            github: "https://github.com/Dinaapappuraj/Intelligent-Money-Manager"
         },
         'road-damage': {
             name: "AI-Enhanced Road Damage Reporting System",
@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Integrated GPS geolocation modules and map visualizer overlays.",
                 "Developed the administrative dashboard for real-time reporting analytics."
             ],
-            github: "https://github.com/Dinaapappuraj"
+            github: "https://github.com/Dinaapappuraj/AI-Enhanced-Road-Damage-Reporting-System"
         },
         'hostel-management': {
             name: "Hostel Management System",
@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Coded database transaction blocks ensuring race-free room allocations.",
                 "Created mobile views for leave tracking and complaint logging."
             ],
-            github: "https://github.com/Dinaapappuraj"
+            github: "https://github.com/Dinaapappuraj/Hostel-Management-App"
         },
         'wheelchair-accessibility': {
             name: "Wheelchair Accessibility Mobile Application",
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Developed the accessibility-focused routing algorithm.",
                 "Conducted field testing using target Android device APKs."
             ],
-            github: "https://github.com/Dinaapappuraj"
+            github: "https://github.com/Dinaapappuraj/Wheelchair-Accessibility-Mobile-Application"
         }
     };
 
